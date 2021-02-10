@@ -25,11 +25,41 @@ to upload on server use "git push"
 ========================================================================
 3. Use `git ls-files -s` to view the content of your staging area.
 
+*   $ git ls-files -s
+100644 8d776c409b52f4c9b938bd3fd2085c54830b6af2 0       file1.txt
+100644 3ad7759fe189c7e87edd8079c4d71b5168d3f075 0       hello.txt
+
+in case we care new file 
+$ touch files2.txt
+$ vim files2.txt
+$ cat files2.txt
+
+ hello how are you .
+ 
+ $ git ls-files -s
+100644 8d776c409b52f4c9b938bd3fd2085c54830b6af2 0       file1.txt
+100644 3ad7759fe189c7e87edd8079c4d71b5168d3f075 0       hello.txt
+
+$ git add files2.txt
+
+$ git ls-files -s
+100644 8d776c409b52f4c9b938bd3fd2085c54830b6af2 0       file1.txt
+100644 018b709c829dece8e573c54b20707db94349e355 0       files2.txt
+100644 3ad7759fe189c7e87edd8079c4d71b5168d3f075 0       hello.txt
+
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   files2.txt
+        new file:   hello.txt
+
 
 ========================================================================
 ========================================================================
 4. Use `git reset` to undo the staging of your file.
-
+first i need "git add ." so all file including nodemodules where add and so in status can see number of files . 
+then used commant "git reset" so now in "git status" is cant see any file there 
 
 ========================================================================
 ========================================================================
