@@ -66,6 +66,25 @@ then used commant "git reset" so now in "git status" is cant see any file there
 5. Stash your changes with a unique stash name, then unstash and apply them back.
 
 
+$ git stash save "add text line in sample file"
+
+
+
+$ git stash list
+stash@{0}: On day_1_gitexersice: add text line in sample file
+
+$ git stash apply stash@{0}
+
+
+$ git stash list
+stash@{0}: On day_1_gitexersice: add text line in sample file
+
+$ git stash drop stash@{0}
+Dropped stash@{0} (c96b919f493047549fa1432f8bbf996715983921)
+drop particula stash were as stash clean over all stash
+HPLaptop@DESKTOP-P1L9HS8 MINGW64 /e/Pesto Work/GitHubClone/Batch07Clone1/challenges-batch07-anchal2107 (day_1_gitexersice)
+$ git stash clear
+
 ========================================================================
 ========================================================================
 6. Create a lightweight tag and confirm that its pointing to the right commit.
